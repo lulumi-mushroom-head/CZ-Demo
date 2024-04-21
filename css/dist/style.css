@@ -1,0 +1,547 @@
+*, a:hover {
+  transition: 0.3s ease all;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+/*=================
+        GOLBAL
+=================*/
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+ul.breacb {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+}
+ul.breacb li a {
+  font-size: 18px;
+  font-weight: normal;
+  cursor: unset;
+}
+ul.breacb li:first-child a {
+  font-weight: bold;
+  color: #FCD77C;
+  cursor: pointer;
+  text-decoration: underline;
+}
+ul.breacb li:first-child::after {
+  content: " / ";
+  width: 18px;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #393939;
+}
+a:hover {
+  color: #010101;
+}
+
+.w_95 {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.mg-10 {
+  margin-top: 2.25rem;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #fff;
+  font-size: 15pt;
+  color: #393939;
+}
+
+h2 {
+  font-size: 30px;
+  display: inline-block;
+  width: fit-content;
+  margin: 0;
+}
+h2::after {
+  content: "";
+  background: #FCD77C;
+  height: 5px;
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+}
+
+h3.en-slogan {
+  font-size: 50px;
+}
+
+blockquote {
+  margin: 0;
+}
+
+.ResponsiveMenu {
+  transition: all 0.3s ease;
+  background: #FCD77C;
+  display: none;
+  width: 0vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.ResponsiveMenu ul.ResMune, .ResponsiveMenu ul.translate {
+  width: 90%;
+  margin: 0 auto;
+}
+.ResponsiveMenu ul.ResMune li, .ResponsiveMenu ul.translate li {
+  border-bottom: 1px dashed #393939;
+}
+.ResponsiveMenu ul.ResMune li a, .ResponsiveMenu ul.translate li a {
+  padding: 20px;
+  font-size: 2rem;
+  width: 100%;
+  display: grid;
+}
+.ResponsiveMenu ul.ResMune li a:hover, .ResponsiveMenu ul.translate li a:hover {
+  transform: translateX(2rem);
+}
+.ResponsiveMenu ul.translate {
+  display: grid;
+  justify-content: stretch;
+}
+.ResponsiveMenu ul.translate li {
+  margin-bottom: 2rem;
+  border-bottom: none;
+}
+.ResponsiveMenu ul.translate li a {
+  background: #fff;
+  border-radius: 1rem;
+}
+.ResponsiveMenu a.icon-close {
+  width: 100%;
+  display: block;
+  padding: 20px;
+  max-width: 3.3rem;
+}
+.ResponsiveMenu a.icon-close img {
+  width: 100%;
+  max-width: 80px;
+}
+.ResponsiveMenu a.icon-close:hover img {
+  transform: rotate(90deg);
+}
+
+/*------ header ------*/
+header {
+  /*------ banner ------*/
+}
+header nav {
+  display: flex;
+  height: 100%;
+  max-height: 128px;
+  grid-template-columns: 20% 80%;
+}
+header nav a {
+  font-weight: 800;
+}
+header nav .logo {
+  width: 100%;
+  max-width: 594px;
+  text-align: center;
+}
+header nav.sticky {
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+header .nav-yellow {
+  background: #FCD77C;
+  width: 100%;
+  display: grid;
+  padding-right: 42px;
+  justify-content: end;
+  align-items: center;
+  justify-items: end;
+  align-content: space-around;
+}
+header .nav-yellow a.openResMenu {
+  display: none;
+}
+header ul.translate, header ul.nav-item {
+  display: flex;
+  align-items: center;
+}
+header ul.translate {
+  justify-content: end;
+  gap: 0 50px;
+}
+header ul.translate a {
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 11px;
+}
+header ul.translate a:hover {
+  background: #e0e0e0;
+}
+header ul.nav-item {
+  justify-content: space-between;
+  gap: 0 50px;
+}
+header .banner {
+  text-align: center;
+  margin: 0 auto 0;
+  padding: 30px 0 30px 0;
+  background: radial-gradient(circle, #FFFFFF, #FFFFFF, #EAECF1);
+}
+
+/*------ main ------*/
+main > section {
+  margin-bottom: 99px !important;
+}
+
+section.stepProcess {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(auto, 1fr);
+  gap: 0px 45px;
+  justify-items: end;
+  align-items: center;
+  margin-top: 68px;
+}
+section.stepProcess span {
+  background: #F6EDD8;
+  padding: 30px 15px;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+section.stepProcess span::before {
+  position: absolute;
+  top: -38px;
+  left: -44px;
+  font-size: 92px;
+  color: #FCD77C;
+  display: inline-block;
+  width: 51px;
+  height: 102px;
+}
+section.stepProcess span:nth-child(2)::before {
+  content: "1";
+}
+section.stepProcess span:nth-child(3)::before {
+  content: "2";
+}
+section.stepProcess span:nth-child(4)::before {
+  content: "3";
+}
+section.stepProcess span:last-child::before {
+  content: "4";
+}
+
+section.Equipment {
+  background: linear-gradient(to bottom, #F9F9F9, #fff);
+  display: flex;
+  padding: 104px 0 104px 0;
+  gap: 0 99px;
+}
+section.Equipment.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  margin: 2rem auto 3rem;
+}
+section.Equipment.content img.contentImg {
+  border-radius: 8px;
+  margin-right: 0.3%;
+}
+section.Equipment.content img.contentImg:hover {
+  cursor: unset;
+  filter: brightness(140%);
+}
+section.Equipment.content article {
+  margin-bottom: 2rem;
+}
+section.Equipment .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 119px;
+  justify-items: end;
+}
+section.Equipment .right {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+}
+section.Equipment .right::after {
+  content: "";
+  background: #FCD77C;
+  border-radius: 64px;
+  width: 100%;
+  max-width: 305px;
+  display: inline-block;
+  position: absolute;
+  height: 514px;
+  right: 200px;
+  z-index: -1;
+}
+section.Equipment a.more-Equipment {
+  background: #FFE788;
+  padding: 20px 40px;
+  border-radius: 15px;
+  color: #393939;
+  font-weight: 500;
+  margin-top: 56px;
+  display: inline-table;
+  box-shadow: 0rem 0rem 27px #FFFA5E;
+}
+section.Equipment a.more-Equipment img {
+  margin-left: 20px;
+  transform: translateX(20px);
+}
+section.Equipment a.more-Equipment:hover img {
+  transform: translateX(30px);
+  transition: transform 500ms, translateX ease 0.1s;
+}
+
+section.Process {
+  position: relative;
+}
+section.Process::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 426px;
+  display: inline-block;
+  background: #F5F1EA;
+  top: 33px;
+  z-index: -1;
+}
+section.Process .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 0px;
+  justify-items: flex-start;
+}
+section.Process .grid-left {
+  width: 100%;
+  max-width: 452px;
+  border-radius: 64px;
+  padding: 30px 60px;
+  background: url("../img/Process-grid-bg.png") no-repeat #F9F9F9;
+  background-position: -23px -78px;
+  background-size: cover;
+  height: 514px;
+  max-height: 514px;
+  position: relative;
+  z-index: 0;
+}
+section.Process .grid-left::before {
+  content: "Process";
+  position: absolute;
+  font-size: 95px;
+  color: #fff;
+  transform: rotate(90deg);
+  top: 177px;
+  left: -107px;
+  z-index: -1;
+}
+section.Process .grid-right {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  gap: 0 0;
+  position: relative;
+}
+section.Process .grid-right img {
+  height: 100%;
+}
+section.Process .grid-right::after {
+  content: "";
+  width: 9px;
+  height: 100%;
+  max-height: 381px;
+  position: absolute;
+  display: inline-block;
+  background: #FCD77C;
+}
+
+section.aboutCZ {
+  background: url("../img/about-cz-bg.png") no-repeat #F9F9F9;
+  padding: 52px 0 52px 0;
+  background-position: 13% 68%;
+  background-size: auto;
+}
+section.aboutCZ blockquote.slogan {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 0 9%;
+}
+section.aboutCZ blockquote.slogan p {
+  line-height: 38px;
+}
+section.aboutCZ .serviceItem {
+  display: flex;
+  grid-template-rows: auto;
+  justify-content: flex-end;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: row;
+  gap: 0 51px;
+}
+section.aboutCZ .serviceItem blockquote {
+  border-radius: 35px;
+  padding: 45px 25px;
+  width: 100%;
+  max-width: 218px;
+  box-shadow: 0.1rem 20px 30px rgba(181, 148, 123, 0.23);
+}
+section.aboutCZ .serviceItem blockquote.gray {
+  background: #7E7E7E;
+  color: #fff;
+  margin-top: 129px;
+}
+section.aboutCZ .serviceItem blockquote.gray p a {
+  color: #fff;
+}
+section.aboutCZ .serviceItem blockquote.yellow {
+  background: #FCD77C;
+  height: fit-content;
+}
+section.aboutCZ .notice-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: end;
+  align-items: flex-end;
+  align-content: space-between;
+  justify-items: end;
+  width: 100%;
+}
+section.aboutCZ .notice-info p {
+  max-width: 443px;
+  margin: 68px 0 0;
+}
+
+/*------ footer ------*/
+footer {
+  background: #F1F1F1;
+  display: grid;
+  padding-bottom: 40px;
+}
+footer blockquote p {
+  color: #877961;
+  margin: 8ox 0 0;
+}
+footer ul.footer-ul, footer ul.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 40px;
+}
+footer img.icon-iso {
+  height: fit-content;
+}
+footer .footer-Nav {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-Nav li a {
+  color: #AB8F4A;
+  font-weight: 800;
+}
+footer .footer-Nav li a:hover {
+  color: #64532b;
+}
+footer .social-columns {
+  display: flex;
+  justify-content: space-between;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/*----------- Responsive Style------------*/
+@media (max-width: 1320px) {
+  header .nav-yellow {
+    padding: 5px;
+    justify-content: center;
+  }
+  header nav .logo {
+    width: 37%;
+  }
+}
+@media (max-width: 991px) {
+  header nav {
+    justify-content: space-between;
+  }
+  header .nav-yellow {
+    width: 18%;
+  }
+
+  ul.translate, ul.nav-item {
+    display: none !important;
+  }
+
+  a.openResMenu {
+    display: block !important;
+  }
+}
+@media (max-width: 800px) {
+  header .banner img {
+    width: 90%;
+  }
+
+  section.Equipment {
+    padding: 3rem 0;
+  }
+  section.Equipment .right::after {
+    right: 0;
+    max-width: 30rem;
+  }
+  section.Equipment blockquote {
+    font-size: 1.6rem;
+  }
+  section.Equipment a.more-Equipment {
+    margin-top: 1rem;
+    width: 60%;
+    font-weight: bold;
+  }
+  section.Equipment .container {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    gap: 10rem 0;
+  }
+}
+@media (max-width: 1111px) {
+  section.Process .container {
+    justify-items: center;
+  }
+}

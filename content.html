@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>內容頁-尚準精密有限公司 </title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <!-- ========== style ==========-->
+        <link rel="stylesheet" href="css/style.css">
+        
+</head>
+<body id="abb">
+        <!-- header -->
+        <header>
+                <nav>
+                        <div class="logo">
+                                <a href=""><h1><img src="img/logo.svg" alt=""></h1></a>
+                        </div>
+                        <div class="nav-yellow">
+                                <ul class="translate">
+                                        <li><a href="">English</a></li>
+                                        <li><a href="">繁體中文</a></li>
+                                </ul>
+                                <ul class="nav-item">
+                                        <li v-for="i in link"><a :href="i.url">{{ i.name }}</a></li>
+                                </ul>
+
+                                 <a href="javascript:void(0);" onclick="openResMenu()" class="openResMenu">
+                                <img src="img/Icon-open-menu.svg" alt="">
+                                </a>
+                        </div>
+                </nav>
+        </header>
+        <!-- main -->
+        <main>
+                <div class="container">
+                        <ul class="breacb">
+                                <li><a href="">首頁</a></li>
+                                <li><a href="">內容頁</a></li>
+                        </ul>
+                        <!-- ======== content ========-->
+                        <section class="Equipment content mg-10">
+                                
+                                <article>
+                                <h1>h1標題標題標題標題</h1>
+                                <h2>h2標題標題標題標題</h2>
+                                <h3 class="en-slogan">h3 slogan slogan sloganslogan</h3>
+                                
+                                <h4 class="equInfo">
+                                        h4 德國標準製造規格製
+                                </h4>
+                                <blockquote>
+                                        <p>製程時，固定每2小時進行機台巡檢調整及抽 檢，依客戶圖面及檢驗規範為依據，進行檢 驗，並記錄於巡檢記錄表製程時，固定每2小時進行機台巡檢調整及抽 檢，依客戶圖面及檢驗規範為依據，進行檢 驗，並記錄於巡檢記錄表製程時，固定每2小時進行機台巡檢調整及抽 檢，依客戶圖面及檢驗規範為依據，進行檢 驗，並記錄於巡檢記錄表製程時，固定每2小時進行機台巡檢調整及抽 檢，依客戶圖面及檢驗規範為依據，進行檢 驗，並記錄於巡檢記錄表</p>
+                                        <img  v-for="(i,index) in 15" src=" img/img-process-1.jpg" alt=""  class="contentImg">
+                                </blockquote>
+
+                                
+                                </article>
+         
+                        </section>
+                        <!-- ======== /content ========-->
+                </div>
+        </main>
+        <!-- footer -->
+        <footer>
+        <div class="container">
+                <div class="footer-Nav">
+                        <h2 class="footer-logo"><a href=""><img src="img/footer-logo.png" alt=""></a></h2>
+                        <ul class="footer-ul">
+                                <li v-for="i in link"><a href="">{{ i.name }}</a></li>
+                        </ul>
+                </div>
+
+                <div class="social-columns">
+                        <blockquote class="footer-info">
+                                <p>誠信為基石  永續經營</p>
+                                <p>品質交期至上 </p>
+                                <p>貼心服務</p>
+                                <p>與客戶達到互利互惠為目標</p>
+                        </blockquote>
+
+                        <ul class="footer-social">
+                                <li><a href=""><img src="img/Icon-line.svg" alt=""></a></li>
+                                <li><a href=""><img src="img/Icon-facebook.svg" alt=""></a></li>
+                                <li><a href=""><img src="img/Icon-email.svg" alt=""></a></li>
+                        </ul>
+                        <img src="img/icon-iso.png" alt="" class="icon-iso">
+                </div>
+
+                <span class="copyright">
+                        ©2022 尚準精密有限公司
+                </span>
+        </div>
+        </footer>
+        <!-- ====== Responsive Menu ====== -->
+        <div class="ResponsiveMenu" id="ResponsiveMenu">
+                <!-- close button -->
+                <a href="javascript:void(0);" id="icon-close" class="icon-close" onclick="closeResMenu()">
+                        <img src="img/Icon-close.svg" alt="">
+                </a>
+
+                <!-- menu -->
+                <ul class="ResMune">
+                        <li v-for="i in link">
+                                <a href="">{{i.name}}</a>
+                        </li>
+                </ul>
+                 <!-- translate -->
+                <ul class="translate">
+                        <li><a href="">English</a></li>
+                        <li><a href="">繁體中文</a></li>
+                </ul>
+
+        </div>
+
+
+        <!----- script ------>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="js/script.js"></script>
+        <script src="js/effect.js"></script>
+</body>
+</html>

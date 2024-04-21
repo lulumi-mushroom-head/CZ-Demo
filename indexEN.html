@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>尚準精密有限公司 </title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <!-- ========== style ==========-->
+        <link rel="stylesheet" href="css/style.css">
+        
+</head>
+<body id="abb">
+        <!-- header -->
+        <header>
+                <nav>
+                        <div class="logo">
+                                <a href=""><h1><img src="img/logo.svg" alt=""></h1></a>
+                        </div>
+                        <div class="nav-yellow">
+                                <ul class="translate">
+                                        <li><a href="">English</a></li>
+                                        <li><a href="">繁體中文</a></li>
+                                </ul>
+                                <ul class="nav-item">
+                                        <li v-for="i in link"><a :href="i.url">{{ i.name }}</a></li>
+                                </ul>
+
+                                 <a href="javascript:void(0);" onclick="openResMenu()" class="openResMenu">
+                                <img src="img/Icon-open-menu.svg" alt="">
+                                </a>
+                        </div>
+                       
+                </nav>
+                <div class="banner w_95">
+                        <img src="img/banner-img.png" alt="">
+                </div>
+        </header>
+        <!-- main -->
+        <main>
+                <section class="stepProcess">
+                        <h2>品質檢驗流程</h2>
+                        <span>  Incoming Material Inspection  </span>
+                        <span> In-Process
+                                Product Management</span>
+                        <span> Finished Product
+                                Quality Inspection</span>
+                        <span>Packaging Inspection</span>
+                </section>
+                <!-- Equipment -->
+                <section class="Equipment mg-10">
+                        <div class="container">
+                        <div class="left">
+                        <h2>機械設備</h2>
+                        <h3 class="en-slogan">Equipment</h3>
+                        <div class="equInfo">
+                                德國標準製造規格製
+                        </div>
+                        <blockquote>
+                                <p>15、20型凸輪式自動加工車床</p>
+                                <p>桌上車床機、半自動攻牙鑽床複合機</p>
+                                <p>凸輪式滾牙機、小型臥式銑床</p>
+                                <p>2.5D影像量測儀、離心式脫油機</p>
+                                <p>三次元振動清洗研磨機</p>
+                                
+                        </blockquote>
+                        
+                               <a href="#" class="more-Equipment">
+                                <span>更多設備</span>
+                                
+                                <img src="img/Icon-chevron-right.png" alt="">
+                               </a> 
+                        </div>
+
+                        <div class="right">
+                             <img src="img/img-equip.png" alt="">   
+                        </div>
+                </div>
+                </section>
+
+                <!-- Process -->
+                <section class="Process">
+                        <div class="container">
+                        <div class="grid-left">
+                                <h2>製程</h2>
+                                <p>製程時，固定每2小時進行機台巡檢調整及抽
+                                        檢，依客戶圖面及檢驗規範為依據，進行檢
+                                        驗，並記錄於巡檢記錄表</p>
+                        </div>
+                        <div class="grid-right">
+                                <img v-for="(i,index) in 6" :src="'img/img-process-' + (index+1) + '.jpg' " alt="">
+                        </div>
+                         </div>
+                </section>
+
+                <!-- about cz -->
+                <section class="aboutCZ w_95">
+                        <div class="container">
+                        <blockquote class="slogan">
+                                <p>現今負責人秉持著精益求精的精神，多年潛心專精於凸輪式自動加工車床，擁有卓越技術能力及豐富精驗，深受客戶的信任與肯定。2020年末，在同業及客戶的支持與鼓勵下，創立了尚準精密有限公司，初創廠房佇立於新北市樹林區佳園路三段，致力於凸輪式自動加工，以精密零件生產及加工為主要業務。
+                                <h2>關於尚準</h2>
+                                </p>
+                        </blockquote>
+
+                        <div class="serviceItem">
+                                <blockquote class="gray">
+                                        <p> <a href="#">一般機械零件</a> </p>
+                                        <p>精密五金零件</p>
+                                        <p>電子零件</p>
+                                        <p>客製化螺絲螺帽</p>
+                                        <p>車用及車用電子零組件</p>
+                                        <p>醫療器材周邊零組件</p>
+                                        <p>消費性電子零件</p>
+                                        <p>生存遊戲零件</p>
+                                </blockquote>
+                                <blockquote class="yellow">
+                                        <p><a href="">15、20型凸輪式自動加工車床</a> </p>
+                                        <p>桌上車床機</p>
+                                        <p>半自動攻牙鑽床複合機</p>
+                                        <p>凸輪式滾牙機</p>
+                                        <p>小型臥式銑床</p>
+                                        <p>2.5D影像量測儀</p>
+                                        <p>離心式脫油機</p>
+                                        <p>三次元振動清洗研磨機</p>
+                                </blockquote>
+                        </div>
+
+                        <div class="notice-info">
+                                <p>
+                                        依照客戶指定要求為標準，進行外包裝品檢作業，檢驗產品標示數量是否清楚確實
+                                </p>
+                        </div>
+
+
+                        </div>
+                </section>
+        </main>
+        <!-- footer -->
+        <footer>
+        <div class="container">
+                <div class="footer-Nav">
+                        <h2 class="footer-logo"><a href=""><img src="img/footer-logo.png" alt=""></a></h2>
+                        <ul class="footer-ul">
+                                <li v-for="i in link"><a :href="i.url">{{ i.name }}</a></li>
+                        </ul>
+                </div>
+
+                <div class="social-columns">
+                        <blockquote class="footer-info">
+                                <p>誠信為基石  永續經營</p>
+                                <p>品質交期至上 </p>
+                                <p>貼心服務</p>
+                                <p>與客戶達到互利互惠為目標</p>
+                        </blockquote>
+
+                        <div>
+                        <ul class="footer-social">
+                        <li><a href=""><img src="img/Icon-line.svg" alt=""></a> 
+                              <a href=""><img src="img/Icon-facebook.svg" alt=""></a> 
+                               <a href=""><img src="img/Icon-email.svg" alt=""></a></li>
+                        </ul> 
+                        <ul class="footer-social contact-phone-address">
+                                <li><img src="img/Icon-location.svg" alt=""> <span>新北市樹林區鎮前街275-3號</span> </li>
+                                <li><img src="img/Icon-phone.svg" alt=""> <span>02-26688990</span> </li>
+                                <li><img src="img/Icon-fax.svg" alt=""> <span> 02-26688970</span></li>
+                        </ul>
+                        </div>
+
+                        <img src="img/icon-iso.png" alt="" class="icon-iso">
+                </div>
+
+                <span class="copyright">
+                        ©2022 尚準精密有限公司
+                </span>
+        </div>
+        </footer>
+        <!-- ====== Responsive Menu ====== -->
+        <div class="ResponsiveMenu" id="ResponsiveMenu">
+                <!-- close button -->
+                <a href="javascript:void(0);" id="icon-close" class="icon-close" onclick="closeResMenu()">
+                        <img src="img/Icon-close.svg" alt="">
+                </a>
+
+                <!-- menu -->
+                <ul class="ResMune">
+                        <li v-for="i in link">
+                                <a href="">{{i.name}}</a>
+                        </li>
+                </ul>
+                 <!-- translate -->
+                <ul class="translate">
+                        <li><a href="">English</a></li>
+                        <li><a href="">繁體中文</a></li>
+                </ul>
+
+        </div>
+
+
+        <!----- script ------>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="js/script.js"></script>
+        <script src="js/effect.js"></script>
+</body>
+</html>
